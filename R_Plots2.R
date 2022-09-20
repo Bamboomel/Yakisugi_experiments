@@ -1,5 +1,3 @@
-#Druckversuche quer zur Faser
-
 Druckversuch_natur_quer <- data.frame(
                             Nummer = c(1:7), 
                             Spannung = c(1528.99,1797.88,1928.90,2142.78,2104.87,2692.69,3128.82), 
@@ -58,9 +56,6 @@ Rohdichte_yaki_oben_quer <- data.frame(
 
 
 
-
-#Druckversuche parallel zur Faser
-
 Druckversuch_yakisugi_parallel <- data.frame(
                                     Nummer = c(1:6), 
                                     Spannung = c(11015.60,11011.61,11016.28,11017.72,11014.07,11014.42), 
@@ -88,9 +83,6 @@ Rohdichte_nat_parallel <- data.frame(
                                   Gewicht = c(5.15,5.11,7.42,5.94,8.33,5.59,6.16))
 
 
-
-
-#Biegeversuche
 
 Biegeversuch_natur <- data.frame(
                         Nummer = c(1:12), 
@@ -127,9 +119,6 @@ Rohdichte_yaki_seite_bieg <- data.frame(
                                 Gewicht = c(59.43,62.63,57.06,67.91,66.15,56.15))
 
 
-
-#Rohdichte Würfel/Quader
-
 Rohdichte_würfel_nat <- data.frame(
                           Nummer = c(1:14),
                           Volumen = c(rep(15.625, times=14)),
@@ -152,16 +141,10 @@ Rohdichte_quader_yaki <- data.frame(
 
 
 
-#Packages
-
 install.packages("scales")
 library(scales)
 
-install.packages("ggplot2")
-library(ggplot2)
 
-install.packages("latex2exp")
-library(latex2exp)
 
 
 

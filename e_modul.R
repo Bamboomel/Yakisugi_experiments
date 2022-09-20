@@ -38,16 +38,18 @@ Druck_Elastizitätsmodul_yakisugi_seite <- (Druckspannung_yakisugi_seite*100)/St
 mean(Druck_Elastizitätsmodul_natur)
 mean(Druck_Elastizitätsmodul_yakisugi_oben)
 mean(Druck_Elastizitätsmodul_yakisugi_seite)
+(mean(Druck_Elastizitätsmodul_natur)/mean(Druck_Elastizitätsmodul_yakisugi_seite))*100-100
 
 plot(Druck_Elastizitätsmodul_natur~Druckversuch_natur_quer$Nummer, 
      pch=16, 
      cex=2, 
      col=alpha("salmon", 0.6),
      xlab = "Versuch",
-     ylab = "Spannung [N/mm^2]",
-     xlim = c(0,11),
-     ylim = c(90, 260),
-     main = "Vergleich Druck-Elastizitätsmodule")
+     ylab = expression(paste("Druckelastizitätsmodul in ", frac(N, mm^2))),#"Spannung [N/mm^2]",
+     xlim = c(1,7),
+     ylim = c(60, 260),
+     main = "Vergleich der Druckelastizitätsmodule",
+     las=1)
 
 abline(h=mean(Druck_Elastizitätsmodul_natur), col="salmon", lty=2, lwd=1)
 
@@ -67,6 +69,13 @@ abline(h=mean(Druck_Elastizitätsmodul_yakisugi_seite), col="orange", lty=2, lwd
 
 
 legend("bottomright", 
-       legend = c("naturbelassen", "yakisugi oberseite", "yakisugi seite", "jeweiliger Mittelwert"),
+       legend = c("naturbelassene Proben", TeX(r'(behandelte $Proben_o$)'), TeX(r'(behandelte $Proben_s$)'), "jeweiliger Mittelwert"),
        col = c(alpha("salmon", 0.6), alpha("lightblue", 0.6), alpha("orange", 0.6), "black"),
        pch=c(16,16,16,NA), cex=0.8, lty=c(NA,NA,NA,2))
+
+
+Druck_Elastizitätsmodul_natur
+Druck_Elastizitätsmodul_yakisugi_oben
+Druck_Elastizitätsmodul_yakisugi_seite
+
+
